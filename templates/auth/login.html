@@ -1,0 +1,52 @@
+<div class="w-full max-w-md flex flex-col justify-center items-center">
+  <form
+    id="loginForm"
+    class="text-white flex flex-col justify-center align-center block max-w-sm p-6 bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg"
+  >
+    <h2 class="text-center text-2xl mb-4">Connection</h2>
+    <div class="mb-4">
+      <label
+        class="block text-white opacity-75 text-sm font-bold mb-2"
+        for="email"
+      >
+        Email
+      </label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+        id="email"
+        type="email"
+        placeholder="Email"
+      />
+    </div>
+    <div class="mb-2">
+      <label
+        class="block text-white opacity-75 text-sm font-bold mb-2"
+        for="password"
+      >
+        Mot de passe
+      </label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+        id="password"
+        type="password"
+        placeholder="******************"
+      />
+    </div>
+    <div
+      class="hidden mb-2 text-red-500 text-xs italic w-full text-center"
+      id="error"
+    ></div>
+    <button
+      class="bg-white hover:text-blue-600 text-black font-bold py-2 px-4 rounded transform hover:scale-110 transition duration-300 ease-in-out"
+      type="submit"
+    >
+      Se connecter
+    </button>
+  </form>
+  <button
+    id="showRegisterForm"
+    class="inline-block align-baseline font-bold text-sm text-gray-500 hover:text-blue-800"
+  >
+    Pas de compte ?
+  </button>
+</div>

@@ -1,0 +1,67 @@
+<div
+    class="grid col-span-1 md:grid-cols-4 gap-4 w-full h-full min-h-screen my-32 justify-start"
+>
+    <div class="md:fixed md:w-auto w-full h-full max-w-xs">
+        <div
+            id="plongees_container"
+            class="w-full text-white flex flex-col justify-start align-center text-center block p-6 bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg max-h-96 overflow-y-auto"
+        >
+            <h1 class="text-xl font-bold text-center">Vos plongées</h1>
+        </div>
+    </div>
+    <div
+        id="plongee_container"
+        class="md:col-span-3 flex flex-col overflow-y-auto gap-2 hidden md:col-start-2 w-full"
+    >
+        <div class="flex flex-col md:flex-row justify-center gap-2 w-full">
+            <div
+                id="user-plongee-container"
+                class="hidden h-full text-white flex flex-col justify-start align-center block p-6 bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg"
+            ></div>
+            <div
+                class="h-full text-white flex flex-col justify-start align-center block p-6 bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg"
+            >
+                <h1 class="text-2xl font-bold text-center">
+                    Paramètres de la plongée
+                </h1>
+                <div
+                    id="plongee_param_container"
+                    class="flex justify-center"
+                ></div>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between gap-2">
+            <div
+                class="w-full h-full text-white flex flex-col justify-start align-center block p-6 bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg"
+            >
+                <h1 class="text-2xl font-bold text-center">Profil</h1>
+                <div id="profile_container"></div>
+            </div>
+            <div
+                class="w-full h-full text-white flex flex-col justify-start align-center block p-6 bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg"
+            >
+                <h1 class="text-2xl font-bold text-center">Equipement</h1>
+                <div id="equipement_container"></div>
+            </div>
+        </div>
+
+        <div
+            id="plongee_chart_container"
+            class="h-full text-white flex flex-col justify-start align-center block p-6 bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg"
+        ></div>
+        <div
+            id="plongee_table_container"
+            class="h-full text-white flex flex-col justify-start align-center block p-6 bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg"
+        ></div>
+    </div>
+</div>
+
+<!---TEMPLATES-->
+
+<div id="tmplt_btn_selector" class="hidden">
+    <button
+        class="btn bg-blue-900 bg-opacity-50 hover:bg-opacity-70 text-white text-lg font-bold rounded-lg p-2 m-2 transform hover:scale-110 transition duration-300 ease-in-out"
+    >
+        Nom de la plongée
+    </button>
+</div>

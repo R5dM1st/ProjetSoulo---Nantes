@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Souslocean</title>
+        <link rel="icon" type="image/png" href="img/Souslocean.ico" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Darumadrop One"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles/styles.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            body {
+                background-image: url("img/background_main.png");
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                background-attachment: fixed;
+                font-family: "Darumadrop One";
+                font-size: 22px;
+                background-position: center;
+            }
+        </style>
+    </head>
+    <body
+        class="bg-blue-100 flex flex-col justify-center min-h-screen space-y-16 overflow-hidden"
+    >
+        <nav id="navbar"></nav>
+        <div
+            id="main-content"
+            class="flex flex-col items-center justify-center min-h-screen space-y-16"
+        ></div>
+
+        <script src="js/ajax.js"></script>
+        <script src="js/displaytables.js"></script>
+        <script src="js/navbar.js"></script>
+        <script src="js/login.js"></script>
+    </body>
+</html>

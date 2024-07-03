@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Souslocean</title>
+    <link rel="icon" type="image/png" href="img/Souslocean.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Darumadrop One' rel='stylesheet'>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <style>
+        body {
+            background-image: url('img/background_page.png');
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Darumadrop One';font-size: 22px;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-blue-100 flex flex-col justify-center min-h-screen overflow-x-hidden"></body>
+    <nav id="navbar">
+    </nav>
+
+    <main id="content" class="flex justify-center h-full w-full p-8 z-0">
+
+    </main>
+
+    <nav class="flex justify-center items-center fixed bottom-0 left-0 right-0 text-white bg-gradient-to-t from-gray-900 to-transparent">
+        <ul id="bottom-nav-ul"class="flex flex-wrap justify-center items-center bg-blue-900 bg-opacity-20 rounded-full px-2 py-1 gap-2 mb-10 z-10 border border-gray-800">
+
+        </ul>
+    </nav>
+
+    <script src="js/ajax.js"></script>
+    <script src="js/dashboard_navigation.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/confettiHandler.js"></script>
+    <script src="js/warning.js"></script>
+
+
+</body>
+</html>

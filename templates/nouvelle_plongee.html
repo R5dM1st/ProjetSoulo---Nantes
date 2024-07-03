@@ -1,0 +1,113 @@
+<div class="flex flex-col gap-2 justify-center items-center py-14">
+    <h1 class="text-white text-4xl">Nouvelle plongée</h1>
+    <div class="flex md:flex-row flex-col gap-2">
+        <div
+            class="w-max text-white justify-start align-center block p-6 bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg overflow-y-auto"
+        >
+            <h2 class="text-2xl text-center mb-2">Choisissez votre profil</h2>
+            <div
+                id="profile_box"
+                class="flex flex-col gap-2 max-h-96 overflow-y-auto"
+            ></div>
+        </div>
+        <div
+            class="w-max text-white flex flex-col justify-start align-center block p-6 bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg overflow-y-auto"
+        >
+            <h2 class="text-2xl text-center mb-2">
+                Choisissez votre équipement
+            </h2>
+            <div
+                id="equipement_box"
+                class="flex flex-col gap-2 max-h-96 overflow-y-auto"
+            ></div>
+        </div>
+    </div>
+    <div
+        class="w-max text-white flex flex-col md:flex-row gap-4 items-center justify-center align-center block p-6 bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg max-h-96 overflow-y-auto"
+    >
+        <div class="flex flex-col">
+            <label
+                class="block text-white opacity-75 font-bold mb-2"
+                for="profondeur"
+            >
+                Profondeur de la plongée (en mètres)
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="profondeur"
+                type="number"
+                placeholder="ex: 20m"
+                min="0"
+            />
+        </div>
+        <div class="flex flex-col">
+            <label
+                class="block text-white opacity-75 font-bold mb-2"
+                for="duree"
+            >
+                Durée de la sortie (en minutes)
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="duree"
+                type="number"
+                placeholder="ex: 60 min"
+                min="0"
+            />
+        </div>
+    </div>
+    <div class="flex flex-col md:flex-row gap-2">
+        <div
+            class="w-max text-white flex flex-col justify-center align-center block p-6 bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg max-h-96 overflow-y-auto"
+        >
+            <h2 class="text-2xl text-center mb-2">
+                Choisissez la date de la plongée
+            </h2>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="date"
+                type="date"
+            />
+        </div>
+        <div
+            class="w-max text-white flex flex-col justify-center align-center block p-6 bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg max-h-96 overflow-y-auto"
+        >
+            <h2 class="text-2xl text-center mb-2">
+                Entrez le nom de votre sortie
+            </h2>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="nom"
+                type="text"
+                placeholder="ex: Plongée à la carrière"
+                maxlength="50"
+            />
+        </div>
+    </div>
+
+    <p class="hidden text-red-300 text-center" id="error"></p>
+
+    <div
+        class="flex gap-4 w-full flex-col md:flex-row justify-end items-center"
+    >
+        <div id="private-box" class="hidden">
+            <label for="private" class="text-white opacity-75 font-bold mb-2">
+                Rendre la plongée privée
+            </label>
+            <input
+                type="checkbox"
+                id="private"
+                name="private"
+                value="private"
+                class="transform scale-150"
+            />
+        </div>
+
+        <button
+            id="submit"
+            class="bg-white hover:text-blue-600 text-black font-bold py-2 px-4 rounded transform hover:scale-110 transition duration-300 ease-in-out"
+        >
+            Valider
+        </button>
+    </div>
+</div>

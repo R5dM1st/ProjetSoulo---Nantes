@@ -1,0 +1,106 @@
+<div class="w-full max-w-md flex flex-col justify-center items-center">
+  <form
+    id="registerForm"
+    class="text-white flex flex-col justify-center align-center block max-w-md p-6 bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg"
+  >
+    <h2 class="text-center text-2xl mb-4">Inscription</h2>
+    <div class="flex justify-center items-center gap-2">
+      <div class="mb-4">
+        <label class="block text-white opacity-75 text-sm font-bold text-center" for="nom">
+          Nom
+        </label>
+        <input
+          class="shadow appearance-none rounded w-full py-2 px-3 text-gray-é00 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+          id="nom"
+          type="text"
+          placeholder="Nom"
+        />
+      </div>
+      <div class="mb-4">
+        <label
+          class="block text-white opacity-75 text-sm font-bold text-center"
+          for="prenom"
+        >
+          Prenom
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-é00 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+          id="prenom"
+          type="text"
+          placeholder="Prénom"
+        />
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="flex flex-col justify-start items-center gap-2 h-full">
+        <label
+          class="block text-white opacity-75 text-sm font-bold"
+          for="email"
+        >
+          Email
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+          id="email"
+          type="email"
+          placeholder="Votre email"
+        />
+        <label
+          class="block text-white opacity-75 text-sm font-bold"
+          for="email_confirmation"
+        >
+          Confirmer l'email
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+          id="email_confirmation"
+          type="email"
+          placeholder="Confirmer votre email"
+        />
+      </div>
+      <div class="flex flex-col justify-start items-center gap-2 h-full">
+        <label
+          class="block text-white opacity-75 text-sm font-bold"
+          for="password"
+        >
+          Mot de passe
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+          id="password"
+          type="password"
+          placeholder="******************"
+        />
+        <label
+          class="block text-white opacity-75 text-sm font-bold"
+          for="password_confirmation"
+        >
+          Confirmer le mot de passe
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+          id="password_confirmation"
+          type="password"
+          placeholder="******************"
+        />
+      </div>
+    </div>
+    <div
+      class="hidden text-red-500 text-xs italic w-full text-center"
+      id="error"
+    ></div>
+
+    <button
+      class="bg-white hover:text-blue-600 text-black font-bold py-2 px-4 rounded transform hover:scale-110 transition duration-300 ease-in-out"
+      type="submit"
+    >
+      S'inscrire
+    </button>
+  </form>
+  <button
+    id="showLoginForm"
+    class="inline-block align-baseline font-bold text-sm text-gray-500 hover:text-blue-800"
+  >
+    Déjà un compte ?
+  </button>
+</div>

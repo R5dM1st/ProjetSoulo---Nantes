@@ -1,0 +1,281 @@
+<div
+    class="grid grid-cols-1 md:grid-cols-4 gap-8 justify-center items-center p-8"
+>
+    <div
+        class="bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg p-2 max-w-xs text-white"
+    >
+        <h2 class="text-2xl text-center mb-2">Vos profils</h2>
+        <div
+            id="profileList"
+            class="gap-3 flex flex-col max-h-96 overflow-y-auto"
+        ></div>
+    </div>
+
+    <div
+        class="bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg p-2 max-w-xs text-white"
+    >
+        <h2 class="text-2xl text-center mb-2">Vos équipements</h2>
+        <div
+            id="equipementList"
+            class="gap-3 flex flex-col max-h-96 overflow-y-auto"
+        ></div>
+    </div>
+
+    <div
+        class="bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg p-6 max-w-3xl text-white"
+    >
+        <h2 class="text-2xl text-center mb-2">Profil de plongée</h2>
+        <div class="mb-2">
+            <label
+                class="block text-white opacity-75 text-sm font-bold mb-2"
+                for="plongeeName"
+                >Nom de la plongée</label
+            >
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="plongeeName"
+                type="text"
+                placeholder="Nom de la plongée"
+            />
+        </div>
+        <div class="mb-2">
+            <label
+                class="block text-white opacity-75 text-sm font-bold mb-2"
+                for="descentSpeed"
+                >Vitesse de descente</label
+            >
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="descentSpeed"
+                type="number"
+                placeholder="20 m/min"
+            />
+        </div>
+        <div class="mb-2">
+            <label
+                class="block text-white opacity-75 text-sm font-bold mb-2"
+                for="ascentSpeed"
+                >Vitesse de remontée</label
+            >
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="ascentSpeed"
+                type="number"
+                placeholder="10 m/min"
+            />
+        </div>
+        <div class="mb-2">
+            <label
+                class="block text-white opacity-75 text-sm font-bold mb-2"
+                for="breathingRate"
+                >Respiration</label
+            >
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="breathingRate"
+                type="number"
+                placeholder="20 L/min"
+            />
+        </div>
+        <button
+            id="profile"
+            class="bg-white hover:text-blue-600 text-black font-bold py-2 px-4 rounded transform hover:scale-110 transition duration-300 ease-in-out w-full"
+            type="submit"
+        >
+            Enregistrer le profil
+        </button>
+    </div>
+
+    <div
+        class="bg-gray-800 border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg p-6 max-w-3xl text-white"
+    >
+        <h2 class="text-2xl text-center mb-2">Nouvel équipement</h2>
+        <div class="mb-2">
+            <label
+                class="block text-white opacity-75 text-sm font-bold mb-2"
+                for="equipementName"
+                >Nom de l'équipement</label
+            >
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="equipementName"
+                type="text"
+                placeholder="Nom de l'équipement"
+            />
+        </div>
+        <div class="mb-4">
+            <label
+                class="block text-white opacity-75 text-sm font-bold mb-2"
+                for="bottleCapacity"
+                >Contenance de la bouteille</label
+            >
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="bottleCapacity"
+                type="number"
+                placeholder="15 L"
+            />
+        </div>
+        <div class="mb-2">
+            <label
+                class="block text-white opacity-75 text-sm font-bold mb-2"
+                for="bottlePressure"
+                >Pression de la bouteille</label
+            >
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="bottlePre"
+                type="number"
+                placeholder="200 b"
+            />
+        </div>
+        <button
+            id="equipement"
+            class="bg-white hover:text-blue-600 text-black font-bold py-2 px-4 rounded transform hover:scale-110 transition duration-300 ease-in-out w-full"
+            type="submit"
+        >
+            Enregistrer de l'équipement
+        </button>
+    </div>
+</div>
+
+<div
+    id="modal_equipement"
+    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
+>
+    <div
+        class="bg-gray-800 flex flex-col border border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg p-6 max-w-xs text-white"
+    >
+        <h2 id="modalTitle" class="text-2xl text-center mb-2"></h2>
+        <div id="modalContent" class="mb-2">
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="equipementName"
+                type="text"
+                placeholder="Nom de l'équipement"
+            />
+            <label
+                class="block text-white opacity-75 text-sm font-bold mb-2"
+                for="bottleCapacity"
+                >Contenance de la bouteille</label
+            >
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="bottleCapacity"
+                type="number"
+                placeholder="15 L"
+                min="0"
+            />
+            <label
+                class="block text-white opacity-75 text-sm font-bold mb-2"
+                for="bottlePressure"
+                >Pression de la bouteille</label
+            >
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="bottlePressure"
+                type="number"
+                placeholder="200 b"
+                min="0"
+            />
+            <input type="hidden" id="equipementId" />
+        </div>
+        <div class="flex justify-between">
+            <button
+                id="save"
+                class="text-sm bg-white hover:text-blue-600 text-black font-bold py-2 px-4 rounded transform hover:scale-110 transition duration-300 ease-in-out w-full"
+                type="submit"
+            >
+                Enregistrer
+            </button>
+            <button
+                id="delete"
+                class="text-sm px-4 py-2 bg-red-500 text-white rounded-lg"
+            >
+                Supprimer
+            </button>
+        </div>
+        <button
+            id="closeModalBtn"
+            class="mt-2 bg-red-500 text-white rounded-full w-max px-4 py-2"
+        >
+            X
+        </button>
+    </div>
+</div>
+
+<div
+    id="modal_profils"
+    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
+>
+    <div
+        class="bg-gray-800 border flex flex-col border-gray-700 rounded-lg shadow bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-lg p-6 max-w-xs text-white"
+    >
+        <h2 id="modalTitle" class="text-2xl text-center mb-2"></h2>
+        <div id="modalContent" class="mb-2 gap-2">
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="profilName"
+                type="text"
+                placeholder="Nom de l'équipement"
+            />
+            <label
+                class="block text-white opacity-75 text-sm font-bold mb-2"
+                for="vitesseDesc"
+                >Vitesse de descente</label
+            >
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="vitesseDesc"
+                type="number"
+                placeholder="15 L"
+                min="0"
+            />
+            <label
+                class="block text-white opacity-75 text-sm font-bold mb-2"
+                for="vitesseAsc"
+                >Vitesse de montée</label
+            >
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="vitesseAsc"
+                type="number"
+                placeholder="200 b"
+                min="0"
+            />
+            <label
+                class="block text-white opacity-75 text-sm font-bold mb-2"
+                for="respiration"
+                >Respiration</label
+            >
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border border-gray-700"
+                id="respiration"
+                type="number"
+                placeholder="200 b"
+                min="0"
+            />
+            <input type="hidden" id="profilId" />
+        </div>
+        <div class="flex justify-between">
+            <button
+                id="save"
+                class="text-sm bg-white hover:text-blue-600 text-black font-bold py-2 px-4 rounded transform hover:scale-110 transition duration-300 ease-in-out w-full"
+            >
+                Enregistrer
+            </button>
+            <button
+                id="delete"
+                class="text-sm px-4 py-2 bg-red-500 text-white rounded-lg"
+            >
+                Supprimer
+            </button>
+        </div>
+        <button
+            id="closeModalBtn"
+            class="mt-2 bg-red-500 text-white rounded-full w-max px-4 py-2"
+        >
+            X
+        </button>
+    </div>
+</div>
